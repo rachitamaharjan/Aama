@@ -10,5 +10,12 @@ router.get('/map', function(req, res, next) {
   res.render('map', { title: 'Express' });
 });
 
+/* GET forum page. */
+router.get('/forum', function (req, res, next) {
+  res.render('forum');
+});
+router.get('/singleblog', function (req, res, next) {
+  res.render('singleblog');
+});
 
 module.exports = router;
