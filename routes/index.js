@@ -17,5 +17,8 @@ router.get('/forum', function (req, res, next) {
 router.get('/singleblog', function (req, res, next) {
   res.render('singleblog');
 });
+router.get('/dietchart', function (req, res, next) {
+  res.render('dietchart');
+});
 
 module.exports = router;
