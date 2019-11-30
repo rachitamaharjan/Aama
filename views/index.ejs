@@ -36,6 +36,30 @@
       -webkit-border-radius: 16px;
     }
   </style>
+  <style>
+      /* Set the size of the div element that contains the map */
+     #map {
+       height: 400px;  /* The height is 400 pixels */
+       width: 100%;  /* The width is the width of the web page */
+      }
+   </style>
+  <meta name="viewport" content="initial-scale=1.0">
+  <meta charset="utf-8">
+  <style>
+    /* Always set the map height explicitly to define the size of the div
+     * element that contains the map. */
+    #map {
+      height: 100%;
+    }
+    /* Optional: Makes the sample page fill the window. */
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+  </style>
+   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD8AOOxKEVQOr0RtmYQEebNfsFUyzJhfR0&callback=initMap"
+   async defer></script>
   <link href='https://dtpregnancy.wpengine.com/wp-content/themes/pregnancy/images/favicon.ico' rel='shortcut icon'
     type='image/x-icon'>
   <link href='https://dtpregnancy.wpengine.com/wp-content/themes/pregnancy/images/apple-touch-icon.png'
@@ -2504,59 +2528,85 @@
       <footer id="footer">
         <div class="footer-widgets">
           <div class="container">
-            <div class='column dt-sc-two-sixth first'>
-              <aside id="text-2" class="widget widget_text">
-                <div class="textwidget"><img
-                    src="https://dtpregnancy.wpengine.com/wp-content/uploads/2016/06/logo_footer.png" alt="" title="">
-                  <div class="vc_row wpb_row vc_row-fluid">
-                    <div class="wpb_column vc_column_container vc_col-sm-12">
-                      <div class="vc_column-inner ">
-                        <div class="wpb_wrapper">
-                          <div class="vc_empty_space" style="height: 22px"><span class="vc_empty_space_inner"></span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <p>Duas molestias excepturi sint occaecati<br> cupiditate non provident, similique sunt in<br> culpa
-                    qui officia deserunt. </p>
-                  <div class="vc_row wpb_row vc_row-fluid">
-                    <div class="wpb_column vc_column_container vc_col-sm-12">
-                      <div class="vc_column-inner ">
-                        <div class="wpb_wrapper">
-                          <div class="vc_empty_space" style="height: 20px"><span class="vc_empty_space_inner"></span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <p class="highlight">Trusted by <strong>15,000</strong> People</p>
+            <div class='column dt-sc-one-sixth '>
+              <aside id="text-4" class="widget widget_text">
+                <div class="textwidget">
+                  
+                  <!-- <div id="map"></div>
+                  <script>
+    
+                      var map;
+                      var marker;
+                      var icon = {
+                    url: "https://www.propleaf.com/project_folder/amenities/1122952813CLINIC.png", // url
+                    scaledSize: new google.maps.Size(50, 50), // scaled size
+                    origin: new google.maps.Point(0,0), // origin
+                    anchor: new google.maps.Point(0, 0) // anchor
+                  };
+                  
+                      function initMap() {
+                        map = new google.maps.Map(document.getElementById('map'), {
+                          center: {lat: 27.7172, lng: 85.3240},
+                          zoom: 8
+                      
+                        });
+                        marker = new google.maps.Marker({
+                          position: {lat: 27.6710, lng: 85.4298},
+                          map:map,
+                          icon:icon
+                          // icon:'https://developers.google.com/maps/documentation/javascript/examples/full/images/map-icon-doctor.png'
+                        })
+                        marker = new google.maps.Marker({
+                          position: {lat: 27.6588, lng: 85.3247},
+                          map:map,
+                          icon:icon
+                          // icon:'https://cdn3.iconfinder.com/data/icons/map-and-location-fill/144/Place_Hospital-512.png',
+                          // scaledSize: new google.maps.Size(50, 50)
+                        })
+                        marker = new google.maps.Marker({
+                          position: {lat: 26.8760, lng: 87.9335},
+                          map:map,
+                          icon:icon
+                          // icon:'https://developers.google.com/maps/documentation/javascript/examples/full/images/map-icon-doctor.png'
+                        })
+                        
+                      }
+                    </script> -->
+                    <div id="map"></div>
+    <script>
+// Initialize and add the map
+function initMap() {
+  // The location of Uluru
+  var uluru = {lat: -25.344, lng: 131.036};
+  // The map, centered at Uluru
+  var map = new google.maps.Map(
+      document.getElementById('map'), {zoom: 4, center: uluru});
+  // The marker, positioned at Uluru
+  var marker = new google.maps.Marker({position: uluru, map: map});
+}
+    </script>
+    <!--Load the API from the specified URL
+    * The async attribute allows the browser to render the page while the API loads
+    * The key parameter will contain your own API key (which is not needed for this tutorial)
+    * The callback parameter executes the initMap() function
+    -->
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD8AOOxKEVQOr0RtmYQEebNfsFUyzJhfR0&callback=initMap">
+    </script>
                 </div>
               </aside>
             </div>
             <div class='column dt-sc-one-sixth '>
               <aside id="text-4" class="widget widget_text">
                 <div class="textwidget">
-                  <ul class="no-bullet">
-                    <li> <a title="" href="#"> Home </a> </li>
-                    <li> <a title="" href="#"> About </a> </li>
-                    <li> <a title="" href="#"> Services</a> </li>
-                    <li> <a title="" href="#"> Health Info </a> </li>
-                    <li> <a title="" href="#"> Appointments </a> </li>
-                    <li> <a title="" href="#"> Contact </a> </li>
-                  </ul>
+                  
                 </div>
               </aside>
             </div>
             <div class='column dt-sc-one-sixth '>
               <aside id="text-3" class="widget widget_text">
                 <div class="textwidget">
-                  <ul class="no-bullet">
-                    <li> <a title="" href="#"> Pregnancy Care </a> </li>
-                    <li> <a title="" href="#"> NICU Facilities </a> </li>
-                    <li> <a title="" href="#"> Trisemester Care </a> </li>
-                    <li> <a title="" href="#"> Maternal Practise </a> </li>
-                  </ul>
+                  
                 </div>
               </aside>
             </div>
@@ -2747,7 +2797,65 @@
   <script type='text/javascript'
     src='https://dtpregnancy.wpengine.com/wp-content/plugins/js_composer/assets/js/dist/js_composer_front.min.js?ver=4.11.2.1'></script>
 </body>
+<script>
+// Initialize and add the map
+function initMap() {
+  // The location of Uluru
+  var uluru = {lat: -25.344, lng: 131.036};
+  // The map, centered at Uluru
+  var map = new google.maps.Map(
+      document.getElementById('map'), {zoom: 4, center: uluru});
+  // The marker, positioned at Uluru
+  var marker = new google.maps.Marker({position: uluru, map: map});
+}
+    </script>
+    <!--Load the API from the specified URL
+    * The async attribute allows the browser to render the page while the API loads
+    * The key parameter will contain your own API key (which is not needed for this tutorial)
+    * The callback parameter executes the initMap() function
+    -->
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD8AOOxKEVQOr0RtmYQEebNfsFUyzJhfR0&callback=initMap">
+    </script>
+// <script>
+    
+//     var map;
+//     var marker;
+//     var icon = {
+//   url: "https://www.propleaf.com/project_folder/amenities/1122952813CLINIC.png", // url
+//   scaledSize: new google.maps.Size(50, 50), // scaled size
+//   origin: new google.maps.Point(0,0), // origin
+//   anchor: new google.maps.Point(0, 0) // anchor
+// };
 
+//     function initMap() {
+//       map = new google.maps.Map(document.getElementById('map'), {
+//         center: {lat: 27.7172, lng: 85.3240},
+//         zoom: 8
+    
+//       });
+//       marker = new google.maps.Marker({
+//         position: {lat: 27.6710, lng: 85.4298},
+//         map:map,
+//         icon:icon
+//         // icon:'https://developers.google.com/maps/documentation/javascript/examples/full/images/map-icon-doctor.png'
+//       })
+//       marker = new google.maps.Marker({
+//         position: {lat: 27.6588, lng: 85.3247},
+//         map:map,
+//         icon:icon
+//         // icon:'https://cdn3.iconfinder.com/data/icons/map-and-location-fill/144/Place_Hospital-512.png',
+//         // scaledSize: new google.maps.Size(50, 50)
+//       })
+//       marker = new google.maps.Marker({
+//         position: {lat: 26.8760, lng: 87.9335},
+//         map:map,
+//         icon:icon
+//         // icon:'https://developers.google.com/maps/documentation/javascript/examples/full/images/map-icon-doctor.png'
+//       })
+      
+//     }
+//   </script>
 <!-- Mirrored from dtpregnancy.wpengine.com/?fbclid=IwAR381Sr7X_qRme1Iox8Ul9A-52rNDYPwk6rGHSPAv1Cy7889LlB_X5PlNlY by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 30 Nov 2019 05:35:00 GMT -->
 
 </html>

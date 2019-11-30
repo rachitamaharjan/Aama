@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Simple Map</title>
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+    <style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 100%;
+        width: 100%
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html,body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD8AOOxKEVQOr0RtmYQEebNfsFUyzJhfR0&callback=initMap"
+     async defer></script>
+  </head>
+ 
+
+    <body>
+      <center><br><B>Nearby Vaccination centres</B><br><br></center>
+        <div id="map"></div>
+  </body>
+
+  <script>
+    
+      var map;
+      var marker;
+      var icon = {
+    url: "https://www.propleaf.com/project_folder/amenities/1122952813CLINIC.png", // url
+    scaledSize: new google.maps.Size(10, 10), // scaled size
+    origin: new google.maps.Point(0,0), // origin
+    anchor: new google.maps.Point(0, 0) // anchor
+};
+
+      function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: 27.7172, lng: 85.3240},
+          zoom: 8
+          // icon:icon
+        });
+        marker = new google.maps.Marker({
+          position: {lat: 27.6710, lng: 85.4298},
+          map:map,
+          // icon:icon
+          icon:'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png'
+        })
+        marker = new google.maps.Marker({
+          position: {lat: 27.6588, lng: 85.3247},
+          map:map,
+          icon:icon
+          // icon:'https://cdn3.iconfinder.com/data/icons/map-and-location-fill/144/Place_Hospital-512.png',
+          // scaledSize: new google.maps.Size(50, 50)
+        })
+        marker = new google.maps.Marker({
+          position: {lat: 26.8760, lng: 87.9335},
+          map:map,
+          // icon:icon
+          icon:'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png'
+        })
+        marker = new google.maps.Marker({
+          position: {lat: 26.7999968, lng: 86.6999972},
+          map:map,
+          icon:'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png'
+          // icon:'https://developers.google.com/maps/documentation/javascript/examples/full/images/map-icon-doctor.png'
+        })
+        marker = new google.maps.Marker({
+          position: {lat: 28.237987, lng: 83.995588},
+          map:map,
+          icon:'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png'
+          // icon:'https://developers.google.com/maps/documentation/javascript/examples/full/images/map-icon-doctor.png'
+        })
+        marker = new google.maps.Marker({
+          position: {lat: 29.4584, lng: 81.502},
+          map:map,
+          icon:'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png'
+          // icon:'https://developers.google.com/maps/documentation/javascript/examples/full/images/map-icon-doctor.png'
+        })
+        marker = new google.maps.Marker({
+          position: {lat: 26.828, lng: 85.303},
+          map:map,
+          icon:'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png'
+          // icon:'https://developers.google.com/maps/documentation/javascript/examples/full/images/map-icon-doctor.png'
+        })
+        
+      }
+    </script>
+</html>
+<!-- <!DOCTYPE html>
+<html>
+  <head>
+    <style>
+       /* Set the size of the div element that contains the map */
+      #map {
+        height: 400px;  /* The height is 400 pixels */
+        width: 100%;  /* The width is the width of the web page */
+       }
+    </style>
+  </head>
+  <body>
+    <h3>My Google Maps Demo</h3>
+    <div id="map"></div>
+    <script>
+// Initialize and add the map
+function initMap() {
+  // The location of Uluru
+  var uluru = {lat: -25.344, lng: 131.036};
+  // The map, centered at Uluru
+  var map = new google.maps.Map(
+      document.getElementById('map'), {zoom: 4, center: uluru});
+  // The marker, positioned at Uluru
+  var marker = new google.maps.Marker({position: uluru, map: map});
+}
+    </script>
+  
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD8AOOxKEVQOr0RtmYQEebNfsFUyzJhfR0&callback=initMap">
+    </script>
+  </body>
+</html> -->
